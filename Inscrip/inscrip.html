@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription - Amzik</title>
+  <link rel="stylesheet" href="insc.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- BARRE DE NAVIGATION (exacte à celle de la page d'accueil) -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="index.html">
+          <img src="/Photos/Logo.png " alt="Amzik Logo" class="logo" />
+        </a>
+        <a href="/Accueil/accueil.html"><h1>Amzik</h1></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="content/products.html">Boutique</a></li>
+        <li><a href="content/about.html">Notre Histoire</a></li>
+        <li><a href="content/contact.html">Contact</a></li>
+        <li><a href="/Login/Login.html" class="btn-login-nav"><i class="fas fa-user"></i> Connexion</a></li>
+      </ul>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- SECTION INSCRIPTION -->
+    <section class="register-section">
+      <div class="register-container">
+        <div class="register-image">
+          <img src="../images/register-vintage.jpg" alt="Objets vintage" />
+          <div class="image-overlay">
+            <h2>Rejoignez notre communauté</h2>
+            <p>Accédez à des offres exclusives et suivez l'histoire de chaque objet</p>
+          </div>
+        </div>
+        <div class="register-form">
+          <h2>Créer un compte</h2>
+          <form id="registrationForm">
+            <div class="form-group">
+              <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="firstName" placeholder="Prénom" required />
+              </div>
+              <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="lastName" placeholder="Nom" required />
+              </div>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-phone"></i>
+              <input type="tel" id="phone" placeholder="Téléphone (optionnel)" />
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Mot de passe" required />
+                <span class="toggle-password" onclick="togglePassword('password')">
+                  <i class="fas fa-eye"></i>
+                </span>
+              </div>
+              <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirmPassword" placeholder="Confirmer mot de passe" required />
+                <span class="toggle-password" onclick="togglePassword('confirmPassword')">
+                  <i class="fas fa-eye"></i>
+                </span>
+              </div>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="terms" required />
+              <label for="terms">J'accepte les <a href="#">conditions générales</a> et la <a href="#">politique de confidentialité</a></label>
+            </div>
+            <button type="submit" class="btn-register">S'inscrire</button>
+            <div class="login-link">
+              <p>Déjà membre ? <a href="/Login/Login.html">Se connecter</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Amzik</h4>
+          <p>Chaque objet a une histoire. Nous vous aidons à trouver celle qui vous ressemble.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Livraison & Retours</a></li>
+            <li><a href="#">Conditions générales</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 12 Rue du Vintage, Paris</p>
+          <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+          <p><i class="fas fa-envelope"></i> contact@amzik-vintage.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Amzik. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script du toggle mot de passe -->
+  <script>
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      const icon = input.nextElementSibling.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+  </script>
+</body>
+</html>

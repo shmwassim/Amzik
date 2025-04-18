@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement - Amzik Vintage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="payement.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>Finaliser votre commande</h2>
+
+    <!-- 🛒 RÉSUMÉ DU PANIER -->
+    <div class="cart-summary">
+      <h3>Résumé de votre panier</h3>
+      <div id="recap-articles">
+        <!-- Articles affichés ici -->
+      </div>
+      <p class="total">Total : <span id="total-price">€0.00</span></p>
+    </div>
+
+    <!-- 🧾 FORMULAIRE -->
+    <form id="payment-form">
+      <div class="field-group">
+        <label>Prénom</label>
+        <input type="text" id="prenom" required>
+      </div>
+
+      <div class="field-group">
+        <label>Nom</label>
+        <input type="text" id="nom" required>
+      </div>
+
+      <div class="field-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="field-group">
+        <label>Téléphone</label>
+        <input type="tel" id="telephone" required>
+      </div>
+
+      <div class="field-group">
+        <label>Livraison</label>
+        <select id="livraison" required>
+          <option value="">-- Sélectionner --</option>
+          <option value="domicile">Livraison à domicile</option>
+          <option value="relais">Point relais</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label>Méthode de paiement</label>
+        <select id="methode" required>
+          <option value="">-- Sélectionner --</option>
+          <option value="carte">Carte Bancaire</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+
+      <div class="field-group" id="cb-fields">
+        <label>Numéro de carte</label>
+        <input type="text" id="cb-numero" placeholder="1234 5678 9012 3456">
+        <label>Expiration</label>
+        <input type="month" id="cb-exp">
+        <label>CVV</label>
+        <input type="text" id="cb-cvv" placeholder="123">
+      </div>
+
+      <button type="submit" class="btn-pay">Valider le paiement</button>
+    </form>
+
+    <p id="confirmation-message"></p>
+  </div>
+
+  <script src="payement.js"></script>
+</body>
+</html>

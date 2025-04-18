@@ -1,0 +1,152 @@
+/* === BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #fef6e9, #ecd5b8);
+    color: #3e2f2f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* === CONTENEUR PRINCIPAL === */
+  .payment-container {
+    background-color: #fffefc;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 520px;
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  /* === TITRE === */
+  .payment-container h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3e2f2f;
+  }
+  
+  /* === RÉSUMÉ PANIER === */
+  .cart-summary {
+    background-color: #fff3e5;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #e6c3a6;
+  }
+  
+  .cart-summary h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #d7b49e;
+    padding-bottom: 6px;
+  }
+  
+  #recap-articles p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 6px 0;
+    color: #4f3b3b;
+  }
+  
+  .total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 12px;
+    color: #c96363;
+  }
+  
+  /* === FORMULAIRE === */
+  form .field-group {
+    margin-bottom: 20px;
+  }
+  
+  .field-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  
+  .field-group input,
+  .field-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d7b49e;
+    border-radius: 6px;
+    background-color: #fdf6ef;
+    font-size: 15px;
+    color: #3e2f2f;
+    transition: border 0.3s, background-color 0.3s;
+  }
+  
+  .field-group input:focus,
+  .field-group select:focus {
+    outline: none;
+    border-color: #c96363;
+    background-color: #fffaf5;
+  }
+  
+  /* Champs CB cachés */
+  #cb-fields {
+    display: none;
+  }
+  
+  /* === BOUTON PAYER === */
+  .btn-pay {
+    width: 100%;
+    background-color: #c96363;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-pay:hover {
+    background-color: #6b8e78;
+    transform: scale(1.03);
+  }
+  
+  /* === MESSAGE CONFIRMATION === */
+  #confirmation-message {
+    margin-top: 25px;
+    text-align: center;
+    color: #3a7f4e;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* === ANIMATION === */
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    .payment-container {
+      padding: 30px 25px;
+    }
+  }
+  

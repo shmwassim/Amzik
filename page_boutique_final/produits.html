@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amzik - Boutique</title>
+  <link rel="stylesheet" href="produits.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Catégories</h2>
+    <ul>
+      <li><a href="#vetements">Vêtements</a></li>
+      <li><a href="#musique">Musique</a></li>
+      <li><a href="#accessoires">Accessoires</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="cart">
+      <h3>Panier</h3>
+      <div id="cart-items"></div>
+      <span id="cart-total">Total: €0.00</span>
+      <button class="btn-pay" id="go-to-payment">Payer</button>
+    </div>
+
+    <!-- Vêtements -->
+    <section class="category-section" id="vetements">
+      <h3>Vêtements</h3>
+      <div class="products-grid">
+        <div class="product-card" data-name="Veste Jean 90s" data-price="79.99">
+          <div class="product-image"><img src="/Photos/Veste Cuir 80.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Veste Jean 90s</h3>
+            <p>Style rétro taille L</p>
+            <div class="product-price">€79.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Chemise Hawaï" data-price="39.99">
+          <div class="product-image"><img src="/Photos/Veste Accueil.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Chemise Hawaï</h3>
+            <p>Colorée et vintage</p>
+            <div class="product-price">€39.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Pantalon Pattes d'éléphant" data-price="59.99">
+          <div class="product-image"><img src="/Photos/pantalon pates .jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Pantalon Pattes d'éléphant</h3>
+            <p>Années 70</p>
+            <div class="product-price">€59.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Musique -->
+    <section class="category-section" id="musique">
+      <h3>Musique</h3>
+      <div class="products-grid">
+        <div class="product-card" data-name="Casette Queen" data-price="24.99">
+          <div class="product-image"><img src="/Photos/cassette queen.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Casette Queen</h3>
+            <p>Album culte</p>
+            <div class="product-price">€24.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Vinyle Pink Floyd" data-price="34.99">
+          <div class="product-image"><img src="/Photos/Pink Floyd.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Vinyle Pink Floyd</h3>
+            <p>Dark Side of the Moon</p>
+            <div class="product-price">€34.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Walkman Sony" data-price="89.99">
+          <div class="product-image"><img src="/Photos/lecteur cassette.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Walkman Sony</h3>
+            <p>Lecteur cassette rétro</p>
+            <div class="product-price">€89.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessoires -->
+    <section class="category-section" id="accessoires">
+      <h3>Accessoires</h3>
+      <div class="products-grid">
+        <div class="product-card" data-name="Lunettes Vintage" data-price="29.99">
+          <div class="product-image"><img src="/Photos/lunette .jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Lunettes Vintage</h3>
+            <p>Style années 60</p>
+            <div class="product-price">€29.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Sacoche Cuir" data-price="49.99">
+          <div class="product-image"><img src="/Photos/sacoche cuir.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Sacoche Cuir</h3>
+            <p>Vintage authentique</p>
+            <div class="product-price">€49.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Montre à gousset" data-price="99.99">
+          <div class="product-image"><img src="/Photos/montre gousset.jpg" alt=""></div>
+          <div class="product-info">
+            <h3>Montre à gousset</h3>
+            <p>Charme rétro</p>
+            <div class="product-price">€99.99</div>
+            <button class="btn-add-to-cart">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="produits.js"></script>
+</body>
+</html>
